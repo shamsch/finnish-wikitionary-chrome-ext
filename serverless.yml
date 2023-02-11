@@ -1,0 +1,23 @@
+service: lambda-api
+app: lambda-api
+org: remonc 
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.8
+  stage: dev
+  region: eu-west-1
+
+functions:
+  word:
+    handler: handler.word
+    events:
+      - http:
+          path: /word
+          method: post
+          cors: true
+
+plugins:
+  - serverless-python-requirements
