@@ -8,7 +8,7 @@ provider:
   name: aws
   runtime: python3.8
   stage: dev
-  region: eu-west-1
+  region: eu-north-1
 
 functions:
   word:
