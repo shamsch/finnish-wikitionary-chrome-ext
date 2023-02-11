@@ -12,11 +12,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # installing python not needed for now
-      # - name: Set up Python
-      #   uses: actions/setup-python@v2
-      #   with:
-      #     python-version: 3.9
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.9
 
       - name: Install Serverless Framework and plugins
         run: |
