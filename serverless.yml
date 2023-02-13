@@ -7,6 +7,17 @@ provider:
   runtime: python3.9
   stage: dev
   region: eu-north-1
+  apiGateway:
+    usagePlan:
+      quota:
+        limit: 100
+        period: DAY
+      throttle:
+        burstLimit: 5
+        rateLimit: 10
+    apiKeys:
+      - api-key
+
 
 functions:
   word:
@@ -16,6 +27,8 @@ functions:
           path: /word
           method: post
           cors: true
+          apiKeyRequired: true
+          apiKeyId: api-key
 
 plugins:
   - serverless-python-requirements
