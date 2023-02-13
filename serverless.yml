@@ -27,8 +27,7 @@ functions:
           path: /word
           method: post
           cors: true
-          apiKeyRequired: true
-          apiKeyId: api-key
+          private: true
 
 plugins:
   - serverless-python-requirements
