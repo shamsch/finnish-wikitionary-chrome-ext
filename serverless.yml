@@ -1,11 +1,11 @@
-service: lambda-api
+service: wiktionary-lambda-api
 
 frameworkVersion: '3'
 
 provider:
   name: aws
   runtime: python3.9
-  stage: dev
+  stage: prod
   region: eu-north-1
   apiGateway:
     usagePlan:
