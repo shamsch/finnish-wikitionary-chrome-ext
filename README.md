@@ -9,7 +9,7 @@ This is a serverless API for scraping Wiktionary for Finnish word definitions. I
 ## Sample API call and response
 
 **POST Request**
-```
+```bash
 curl -X POST \
   https://<API-URL>.com/word/prod \
   -H 'Content-Type: application/json' \
@@ -19,8 +19,7 @@ curl -X POST \
 }'
 ```
 **JSON Response**
-```
-json
+```json
 [
 	{
 		"etymology": "Borrowed from Swedish kisse, kissa (“cat”), with other dialectal forms including kise, kiss. Probably ultimately from a cat call \"kis-kis-kis\" used throughout Europe (see kis; also compare Russian киса (kisa)).\n",
