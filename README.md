@@ -1,14 +1,15 @@
 # Serverless Lambda API for scraping Wikitonary for Finnish word definitions
 
-This is a serverless API for scraping Wiktionary for Finnish word definitions. It is built using the Serverless framework and uses AWS Lambda and Python package `wiktionaryparser` for scraping. 
+This is a serverless API for scraping Wiktionary for Finnish word definitions. It is built using the Serverless framework and uses AWS Lambda and Python package `wiktionaryparser` for scraping.
 
 ## Used in the following project
 
-- [wikifi-chrome-extension](https://github.com/shamsch/wikifi-chrome-extension)
+-   [wikifi-chrome-extension](https://github.com/shamsch/wikifi-chrome-extension)
 
 ## Sample API call and response
 
 **POST Request**
+
 ```bash
 curl -X POST \
   https://<API-URL>.com/word/prod \
@@ -18,7 +19,9 @@ curl -X POST \
     "word": "kissa"
 }'
 ```
+
 **JSON Response**
+
 ```json
 [
 	{
@@ -43,10 +46,7 @@ curl -X POST \
 					},
 					{
 						"relationshipType": "hyponyms",
-						"words": [
-							"kissanpentu",
-							"kolli"
-						]
+						"words": ["kissanpentu", "kolli"]
 					}
 				],
 				"examples": [
@@ -65,6 +65,3 @@ curl -X POST \
 	}
 ]
 ```
-
-
-
