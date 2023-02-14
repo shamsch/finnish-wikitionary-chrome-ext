@@ -10,7 +10,7 @@ provider:
   apiGateway:
     usagePlan:
       quota:
-        limit: 100
+        limit: 10000
         period: DAY
       throttle:
         burstLimit: 5
